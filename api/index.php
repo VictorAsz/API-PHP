@@ -18,7 +18,7 @@ if(isset($_GET['options'])){
     $data['status'] = 'ERROR';
 }
 
-
+response($data);
 function response($data_response)
 {
     header('Content-Type:application/json');
