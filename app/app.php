@@ -2,8 +2,8 @@
 
 define('API_BASE', 'http://localhost/API%20PHP/api/?option=' );
 
-echo API_BASE . 'status';
-
-
+function api_request($option){
+ $client = curl_init(API_BASE . $option);
+}
 
 ?>
