@@ -1,28 +1,29 @@
-<?php 
+<?php
 
 $data = [];
 
-if(isset($_GET['options'])){
 
-    switch($_GET['option']) {
+if(isset($_GET['option'])){
+
+    switch ($_GET['option']) {
         case 'status':
             $data['status'] = 'SUCCESS';
             $data['data'] = 'API running OK!';
-        break;
-        
+            break;
+
         default:
             $data['status'] = 'ERROR';
-        break;
+            break;
     }
+
 } else {
     $data['status'] = 'ERROR';
 }
 
-response($data);
-function response($data_response)
-{
-    header('Content-Type:application/json');
-    echo json_encode($data_response);  
-}
 
-?>
+response($data);
+
+function response($data_response){
+    header("Content-Type:application/json");
+    echo json_encode($data_response);
+}
