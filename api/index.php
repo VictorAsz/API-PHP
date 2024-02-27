@@ -2,6 +2,8 @@
 
 $data = [];
 
+$data['status'] = 'ERROR';
+$data['data'] = null;
 
 if(isset($_GET['option'])){
 
@@ -10,16 +12,7 @@ if(isset($_GET['option'])){
             $data['status'] = 'SUCCESS';
             $data['data'] = 'API running OK!';
             break;
-
-        default:
-            $data['status'] = 'ERROR';
-            break;
-    }
-
-} else {
-    $data['status'] = 'ERROR';
-}
-
+} 
 
 response($data);
 
