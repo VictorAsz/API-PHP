@@ -12,6 +12,9 @@ if(isset($_GET['option'])){
             $data['status'] = 'SUCCESS';
             $data['data'] = 'API running OK!';
             break;
+
+    }
+
 } 
 
 response($data);
